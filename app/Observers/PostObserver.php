@@ -15,7 +15,7 @@ class PostObserver
     public function saving(Post $post)
     {
         //
-        dump( "post saving".PHP_EOL);
+        dump( "post saving".PHP_EOL,$post);
     }
     /**
      * Handle the Post "saved" event.
@@ -26,7 +26,7 @@ class PostObserver
     public function saved(Post $post)
     {
         //
-        dump( "post saved".PHP_EOL);
+        dump( "post saved".PHP_EOL,$post);
     }
     /**
      * Handle the Post "creating" event.
@@ -37,7 +37,7 @@ class PostObserver
     public function creating(Post $post)
     {
         //
-        dump( "post creating".PHP_EOL);
+        dump( "post creating".PHP_EOL,$post);
     }
     /**
      * Handle the Post "created" event.
@@ -48,7 +48,7 @@ class PostObserver
     public function created(Post $post)
     {
         //
-        dump( "post created".PHP_EOL);
+        dump( "post created".PHP_EOL,$post);
     }
 
     /**
@@ -60,7 +60,19 @@ class PostObserver
     public function updated(Post $post)
     {
         //
-        echo "post updated".PHP_EOL;
+        dump( "post updated".PHP_EOL,$post);
+
+    }
+    /**
+     * Handle the Post "updating" event.
+     *
+     * @param  \App\Models\Post  $post
+     * @return void
+     */
+    public function updating(Post $post)
+    {
+        //
+        dump( "post updating".PHP_EOL,$post);
 
     }
 
@@ -73,7 +85,7 @@ class PostObserver
     public function deleted(Post $post)
     {
         //
-        echo "post deleted".PHP_EOL;
+        dump( "post deleted".PHP_EOL,$post);
 
     }
 
